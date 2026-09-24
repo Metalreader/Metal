@@ -1,18 +1,18 @@
 # Eros — course vers la droite
 
-Généré par `python3 generate.py` à partir de `EROS_walk_right.aseprite` (perso) en suivant
-la structure de `BASE_running_right.aseprite` (modèle de course).
+Généré par `python3 generate.py`. Seule la tête vient du dessin original
+(`EROS_walk_right.aseprite`) ; manteau, bras, jambes et chaussures sont reconstruits à chaque
+frame avec la palette d'Eros et un contour noir.
 
-- `out/EROS_run_right.aseprite` / `out/eros_run_right.png` : 4 frames 32×32, 80 ms, tag `run_right`
+- `out/EROS_run_right.aseprite` / `out/eros_run_right.png` : 6 frames 32×32, 80 ms, tag `run_right`
 - `out/preview_run_x6.gif` : course avec sol qui défile
-- `out/preview_walk_vs_run_x6.gif` : marche (gauche) et course (droite) côte à côte
 
-| # | Pose |
-|---|---|
-| 0 | Passage (jambes réunies) |
-| 1 | Foulée A : rebond +1 px, bras avant, jambe arrière en poussée |
-| 2 | Passage |
-| 3 | Foulée B : rebond +1 px, bras arrière, genou avant levé |
+| # | Pose | Rebond |
+|---|---|---|
+| 0 | Contact : pied proche devant, pied du fond levé derrière, bras proche en arrière | +1 |
+| 1 | Réception : corps au plus bas | 0 |
+| 2 | Poussée : genou du fond qui monte, pan du manteau qui flotte | +1 |
+| 3-5 | Même chose de l'autre côté | |
 
-La tête est avancée d'1 px (le perso penche en courant) et la queue de cheval se soulève
-pendant les foulées. Même canevas et même point d'ancrage que la marche.
+La jambe et le bras du fond sont plus sombres pour lire la profondeur. La queue de cheval
+réagit au rebond avec un temps de retard. Même canevas et même ancrage que la marche.
